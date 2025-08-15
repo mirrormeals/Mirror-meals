@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" role="img" aria-label="Split plate representing Mirror Meals duality">
+  <defs>
+    <!-- brand rim -->
+    <linearGradient id="ring" x1="0" x2="1">
+      <stop offset="0%" stop-color="#C0332B"/>
+      <stop offset="100%" stop-color="#FDBA2D"/>
+    </linearGradient>
+    <!-- rustic wood (left) -->
+    <pattern id="wood" width="18" height="18" patternUnits="userSpaceOnUse">
+      <rect width="18" height="18" fill="#7A5133" opacity=".08"/>
+      <path d="M0 9 H18" stroke="#7A5133" stroke-width="2" opacity=".15"/>
+      <path d="M0 3 H18" stroke="#7A5133" stroke-width="1" opacity=".10"/>
+      <path d="M0 15 H18" stroke="#7A5133" stroke-width="1" opacity=".10"/>
+    </pattern>
+    <!-- fancy linen (right) -->
+    <pattern id="linen" width="10" height="10" patternUnits="userSpaceOnUse">
+      <rect width="10" height="10" fill="#ffffff"/>
+      <path d="M0 0 H10" stroke="#BFC4C9" stroke-width=".6" opacity=".15"/>
+      <path d="M0 0 V10" stroke="#BFC4C9" stroke-width=".6" opacity=".15"/>
+    </pattern>
+    <!-- soft card shadow -->
+    <filter id="shadow" x="-20%" y="-40%" width="140%" height="200%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#000" flood-opacity=".12"/>
+    </filter>
+    <!-- clip for plate -->
+    <clipPath id="plateClip"><circle cx="360" cy="180" r="110"/></clipPath>
+  </defs>
+
+  <!-- placemat card -->
+  <g filter="url(#shadow)">
+    <rect x="120" y="60" width="480" height="240" rx="20" fill="#fff"/>
+    <rect x="120" y="60" width="240" height="240" rx="20" fill="url(#wood)"/>
+    <rect x="360" y="60" width="240" height="240" rx="20" fill="url(#linen)"/>
+    <rect x="120" y="60" width="480" height="240" rx="20" fill="none" stroke="#DDD" stroke-width="1"/>
+  </g>
+
+  <!-- plate shadow -->
+  <ellipse cx="360" cy="220" rx="96" ry="14" fill="#000" opacity=".10"/>
+
+  <!-- plate -->
+  <circle cx="360" cy="180" r="110" fill="#fff"/>
+  <circle cx="360" cy="180" r="110" fill="none" stroke="url(#ring)" stroke-width="12"/>
+
+  <!-- split + warm tint -->
+  <path d="M360 70 V290" stroke="#9AA0A6" stroke-width="2" opacity=".45" stroke-linecap="round"/>
+  <rect x="120" y="60" width="240" height="240" fill="#C0332B" opacity=".06" clip-path="url(#plateClip)"/>
+</svg>
