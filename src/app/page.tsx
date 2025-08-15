@@ -4,7 +4,8 @@ export default function Home() {
   return (
     <section className="grid min-h-[70svh] place-items-center text-center p-6">
       <div className="space-y-6">
-        <img src="/logo-badge.svg" alt="Mirror Meals badge" className="mx-auto w-[320px] md:w-[420px] h-auto" />
+        <img src="/logo-badge.svg" alt="Mirror Meals badge"
+             className="mx-auto w-[240px] md:w-[320px] h-auto" />
         <h1 className="text-4xl md:text-6xl font-bold">Two Takes on Taste</h1>
         <p className="mx-auto max-w-2xl text-lg md:text-xl">
           Every palate deserves variety and every schedule flexibility. Our recipes come in pairs—one traditional, rich in heritage; the other, a modern, time-saving twist.
