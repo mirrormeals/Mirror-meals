@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Mirror Meals badge">
+  <defs>
+    <style>
+      :root { color-scheme: light dark; }
+      .navy{fill:#0E2733}
+      .rust{fill:#B24E1E}
+      .ink{fill:#0E2733}
+      .steel{fill:#8D959C}
+      .ring{stroke:#0E2733}
+    </style>
+    <!-- arc paths for curved text -->
+    <path id="topArc" d="M 96 256 A 160 160 0 0 1 416 256" />
+    <path id="bottomArc" d="M 416 256 A 160 160 0 0 1 96 256" />
+    <clipPath id="clipInner"><circle cx="256" cy="256" r="180"/></clipPath>
+  </defs>
+
+  <!-- outer white badge with double ring -->
+  <circle cx="256" cy="256" r="238" fill="#fff" stroke="#0E2733" stroke-width="10"/>
+  <circle cx="256" cy="256" r="208" fill="none" stroke="#0E2733" stroke-width="6"/>
+
+  <!-- curved text -->
+  <g class="ink" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-weight="800">
+    <text font-size="40" letter-spacing="3">
+      <textPath href="#topArc" startOffset="50%" text-anchor="middle">MIRROR</textPath>
+    </text>
+    <text font-size="40" letter-spacing="3">
+      <textPath href="#bottomArc" startOffset="50%" text-anchor="middle">MEALS</textPath>
+    </text>
+  </g>
+
+  <!-- inner field (the plate area) -->
+  <g clip-path="url(#clipInner)">
+    <!-- left half: deep navy -->
+    <rect x="76" y="76" width="180" height="360" class="navy"/>
+    <!-- right half: light plate -->
+    <rect x="256" y="76" width="180" height="360" fill="#E8EAEC"/>
+    <!-- right semicircle rust rim (stroke draws a ring segment) -->
+    <path d="M256 76 A 180 180 0 0 1 256 436" fill="none" stroke="#B24E1E" stroke-width="36"/>
+    <!-- center split -->
+    <rect x="254.5" y="76" width="3" height="360" fill="#9AA0A6" opacity=".55"/>
+  </g>
+
+  <!-- outline of inner field -->
+  <circle cx="256" cy="256" r="180" fill="none" stroke="#0E2733" stroke-width="4"/>
+
+  <!-- left-side classic tool silhouettes (subtle steel over navy) -->
+  <g class="steel" opacity=".9">
+    <!-- pepper mill -->
+    <rect x="148" y="270" width="20" height="74" rx="8"/>
+    <circle cx="158" cy="268" r="10"/>
+    <!-- skimmer / strainer -->
+    <circle cx="212" cy="240" r="30"/>
+    <rect x="206" y="270" width="12" height="68" rx="6"/>
+    <!-- peeler -->
+    <rect x="180" y="324" width="14" height="50" rx="7"/>
+    <!-- small egg/stone -->
+    <ellipse cx="176" cy="240" rx="16" ry="21"/>
+  </g>
+
+  <!-- right-side modern tool silhouettes (darker on light) -->
+  <g class="ink" opacity=".9">
+    <!-- potato masher -->
+    <rect x="304" y="212" width="14" height="92" rx="7"/>
+    <circle cx="311" cy="310" r="28"/>
+    <!-- whisk -->
+    <g transform="translate(360 236)">
+      <rect x="0" y="0" width="12" height="98" rx="6"/>
+      <path d="M6 14 C 36 20, 36 78, 6 88" fill="none" stroke="#0E2733" stroke-width="6" stroke-linecap="round"/>
+      <path d="M6 14 C 26 24, 26 74, 6 84" fill="none" stroke="#0E2733" stroke-width="3" stroke-linecap="round"/>
+    </g>
+  </g>
+</svg>

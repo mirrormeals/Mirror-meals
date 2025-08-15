@@ -15,7 +15,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <header className="sticky top-0 z-10 border-b border-white/10 bg-black/70 backdrop-blur">
           <nav className="mx-auto flex max-w-5xl items-center gap-6 px-4 py-3">
             <Link href="/" className="flex items-center gap-2 font-bold">
-              <img src="/logo.svg" alt="Mirror Meals" className="h-6" />
+              <img src="/logo-badge.svg" alt="Mirror Meals" className="h-6" />
               <span>Mirror Meals</span>
             </Link>
             <Link href="/recipes" className="opacity-90 hover:opacity-100">Recipes</Link>
