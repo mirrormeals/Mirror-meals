@@ -1,13 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 40" role="img" aria-label="Mirror Meals">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Mirror Meals">
   <defs>
-    <linearGradient id="mm-grad" x1="0" x2="1">
+    <linearGradient id="ring" x1="0" x2="1">
       <stop offset="0%" stop-color="#C0332B"/>
       <stop offset="100%" stop-color="#FDBA2D"/>
     </linearGradient>
   </defs>
-  <g fill="none" stroke="url(#mm-grad)" stroke-width="6" stroke-linecap="round">
-    <path d="M15 30 V12 q0-7 7-7 t7 7 v18" />
-    <path d="M46 30 V12 q0-7 7-7 t7 7 v18" transform="scale(-1,1) translate(-92,0)"/>
-  </g>
-  <text x="60" y="28" font-family="serif" font-weight="700" font-size="20" fill="#222">Mirror Meals</text>
+  <!-- plate shadow -->
+  <ellipse cx="32" cy="42" rx="18" ry="6" fill="#000" opacity=".08"/>
+  <!-- plate -->
+  <circle cx="32" cy="32" r="20" fill="#fff"/>
+  <!-- plate rim -->
+  <circle cx="32" cy="32" r="20" fill="none" stroke="url(#ring)" stroke-width="3"/>
+  <!-- split line -->
+  <path d="M32 14 V50" stroke="#888" stroke-width="1.5" stroke-linecap="round" opacity=".6"/>
+  <!-- subtle half-tone on left -->
+  <clipPath id="clipPlate"><circle cx="32" cy="32" r="20"/></clipPath>
+  <rect x="0" y="0" width="32" height="64" fill="#C0332B" opacity=".08" clip-path="url(#clipPlate)"/>
 </svg>
