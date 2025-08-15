@@ -3,11 +3,17 @@ import { getRecipe, recipes } from "@/data/recipes";
 import RecipePair from "@/components/RecipePair";
 
 export function generateStaticParams() {
-  return recipes.map(r => ({ slug: r.slug }));
+  return recipes.map((r) => ({ slug: r.slug }));
 }
 
-export default function RecipeDetail({ params }: { params: { slug: string } }) {
-  const recipe = getRecipe(params.slug);
+// Next.js 15: params is a Promise — await it
+export default async function RecipeDetail({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const recipe = getRecipe(slug);
   if (!recipe) return notFound();
   return (
     <div className="space-y-6">
