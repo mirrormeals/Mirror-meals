@@ -11,6 +11,9 @@ export type RecipePair = {
   title: string;
   subtitle?: string;
   tags: string[];
+  difficulty?: "easy" | "medium" | "hard";
+  protein?: "beef" | "chicken" | "pork" | "veggie" | "seafood" | "other";
+  totalMinutes?: number; // approximate total time for filtering
   images: { traditional: string; modern: string };
   versions: { traditional: Version; modern: Version };
 };
@@ -22,6 +25,9 @@ export const recipes: RecipePair[] = [
     title: "Chicken Souvlaki",
     subtitle: "Charcoal classic vs. air-fryer express",
     tags: ["traditional","modern","poultry","greek","30–90m"],
+    difficulty: "medium",
+    protein: "chicken",
+    totalMinutes: 45,
     images: {
       traditional: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=1200",
       modern: "https://images.unsplash.com/photo-1561047029-3000e62f0e9d?q=80&w=1200",
@@ -71,6 +77,9 @@ export const recipes: RecipePair[] = [
     title: "Pesto Pasta",
     subtitle: "Mortar & pestle vs. blender blitz",
     tags: ["traditional","modern","veg","15m","italian"],
+    difficulty: "easy",
+    protein: "veggie",
+    totalMinutes: 20,
     images: {
       traditional: "https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?q=80&w=1200",
       modern: "https://images.unsplash.com/photo-1481931098730-318b6f776db0?q=80&w=1200",

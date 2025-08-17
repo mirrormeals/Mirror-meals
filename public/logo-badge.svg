@@ -21,7 +21,6 @@
     <rect x="76" y="76" width="180" height="360" class="navy"/>
     <rect x="256" y="76" width="180" height="360" fill="#E8EAEC"/>
     <path d="M256 76 A 180 180 0 0 1 256 436" fill="none" stroke="#B24E1E" stroke-width="36"/>
-    <rect x="254.5" y="76" width="3" height="360" fill="#9AA0A6" opacity=".55"/>
 
     <!-- classic tools (left) -->
     <g class="steel" opacity=".9">
